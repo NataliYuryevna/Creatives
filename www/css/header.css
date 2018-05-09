@@ -76,3 +76,33 @@ ul.nav li.active{
 ul.nav li a:hover{
 	background: transparent;
 }
+
+.social{
+	display: inline-block;
+}
+
+.social .social-icon {
+	width: 20px;
+	height: 20px;
+	background: url(../images/social.png) no-repeat;
+	display: inline-block;
+	margin: 45px 10px;
+}
+
+.social .facebook{
+	background-position: 0 0;
+
+}
+
+.social .twitter{
+	background-position: -40px 0;
+}
+
+.social .skype{
+	background-position: -80px 0;
+}
+
+.social .instagram{
+	background-position: -120px 0;
+}
+
