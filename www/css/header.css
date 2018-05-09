@@ -1,3 +1,13 @@
+@font-face {
+	font-family: Myriad Pro; /* Имя шрифта */
+	src: url(../fonts/MyriadPro.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: OpenSans; /* Имя шрифта */
+	src: url(../fonts/OpenSans.ttf); /* Путь к файлу со шрифтом */
+}
+
 .header{
 	background-image: url("../images/Layer96.png");
 }
@@ -6,7 +16,8 @@
 	display: inline-block;
 	position: relative;
 	float: left;
-	margin: 30px 8px;
+	margin: 30px 8px 20px 8px;
+	margin-right: 192px;
 }
 
 .header .logo .visibleLogo{
@@ -41,4 +52,27 @@
 
 .header hr{
 	margin: 0px;
+	opacity: 0.38;
+}
+
+ul.nav{
+	margin: 30px 35px 0 35px;
+}
+
+ul.nav li a{
+	font-size: 20px;
+	font-family: "Myriad Pro";
+	color: rgb(255, 255, 255);
+	line-height: 1.2;
+	padding-bottom: 42px;
+	font-weight: normal;
+}
+
+ul.nav li.active{
+	border-bottom: 6px solid rgb(17, 116, 158);
+
+}
+
+ul.nav li a:hover{
+	background: transparent;
 }
