@@ -1,15 +1,30 @@
 @font-face {
 	font-family: Myriad Pro; /* Имя шрифта */
-	src: url(../fonts/MyriadPro.otf); /* Путь к файлу со шрифтом */
+	src: url("../fonts/MyriadPro.otf"); /* Путь к файлу со шрифтом */
 }
 
 @font-face {
 	font-family: OpenSans; /* Имя шрифта */
-	src: url(../fonts/OpenSans.ttf); /* Путь к файлу со шрифтом */
+	src: url("../fonts/OpenSans.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+	font-family: Gotham;
+	src: url("../fonts/Gotham.otf");
+}
+
+html,body{
+	margin: 0;
 }
 
 .header{
 	background-image: url("../images/Layer96.png");
+	background-attachment: fixed;
+	height: 100vh;
+}
+
+.container{
+	margin: 0 10%;
 }
 
 .header .logo{
@@ -17,7 +32,6 @@
 	position: relative;
 	float: left;
 	margin: 30px 8px 20px 8px;
-	margin-right: 192px;
 }
 
 .header .logo .visibleLogo{
@@ -32,7 +46,7 @@
 }
 
 .header .logo .visibleLogo p{
-	text-align:center; 
+	text-align: center; 
 	vertical-align: middle;
 	display: table-cell;
 	font-size: 28.349px;
@@ -50,59 +64,103 @@
 	height: 67px;
 }
 
-.header hr{
-	margin: 0px;
-	opacity: 0.38;
+div.right {
+	float: right;
+	margin-top: 40px;
+}
+
+nav,
+div.social{
+	display: inline-block;
+}
+
+.social{
+	display: inline;
+}
+
+.social span{
+	padding: 0 10px;
+}
+
+[class^="flaticon-"]{
+	color: #ffffff;
+}
+
+[class^="flaticon-"]:hover{
+	color: rgb(17, 116, 158);
 }
 
 ul.nav{
-	margin: 30px 35px 0 35px;
+	margin: 0 35px;
+}
+
+ul.nav li{
+	display: inline-block;
+}
+
+a{
+	text-decoration: none;
 }
 
 ul.nav li a{
 	font-size: 20px;
 	font-family: "Myriad Pro";
-	color: rgb(255, 255, 255);
 	line-height: 1.2;
-	padding-bottom: 42px;
+	color: rgb(255, 255, 255);
+	padding: 40px 10px 50px 10px;
 	font-weight: normal;
-}
-
-ul.nav li.active{
-	border-bottom: 6px solid rgb(17, 116, 158);
-
+	margin: 0;
 }
 
 ul.nav li a:hover{
 	background: transparent;
+	border-bottom: 6px solid rgb(17, 116, 158);
 }
 
-.social{
-	display: inline-block;
+[class^="flaticon-"]:hover{
+	color: rgb(17, 116, 158);
 }
 
-.social .social-icon {
-	width: 20px;
-	height: 20px;
-	background: url(../images/social.png) no-repeat;
-	display: inline-block;
-	margin: 45px 10px;
+#checkbox_id, #button_id{
+	display: none;
 }
 
-.social .facebook{
-	background-position: 0 0;
-
+@media screen and (max-width: 348px)  {
+	div.right {
+		margin-top: 0px;
+	}
 }
 
-.social .twitter{
-	background-position: -40px 0;
+@media screen and (max-width: 1058px)  {
+	#button_id{
+		display: inline-block;
+	}
+	
+	nav{
+		display: none;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	#checkbox_id:checked ~ nav{
+		display: block;
+	}
+
+	ul.nav{
+		padding: 0;
+	}
+
+	nav ul.nav li{
+		display: block;
+		padding: 0;
+		margin: 10px 0;
+	}
+
+	nav ul.nav li a{
+		padding: 0px 10px;
+	}
 }
 
-.social .skype{
-	background-position: -80px 0;
+.menu{
+	position: relative;
 }
-
-.social .instagram{
-	background-position: -120px 0;
-}
-
