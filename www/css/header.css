@@ -54,7 +54,7 @@ html,body{
 	color: rgb(245, 245, 245);
 	font-weight: bold;
 	text-transform: uppercase;
-	line-height: 1.2;
+	letter-spacing: 1.2px;
 }
 
 .header .logo .shadowLogo{
@@ -105,7 +105,7 @@ a{
 ul.nav li a{
 	font-size: 20px;
 	font-family: "Myriad Pro";
-	line-height: 1.2;
+	letter-spacing: 1.2px;
 	color: rgb(255, 255, 255);
 	padding: 40px 10px 50px 10px;
 	font-weight: normal;
@@ -125,13 +125,7 @@ ul.nav li a:hover{
 	display: none;
 }
 
-@media screen and (max-width: 348px)  {
-	div.right {
-		margin-top: 0px;
-	}
-}
-
-@media screen and (max-width: 1058px)  {
+@media screen and (max-width: 1229px)  {
 	#button_id{
 		display: inline-block;
 	}
@@ -163,4 +157,74 @@ ul.nav li a:hover{
 
 .menu{
 	position: relative;
+}
+
+.title{
+	font-size: 1.5vw;
+	font-family: "Gotham";
+	color: rgb(17, 116, 158);
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1.5vw;
+	text-align: center;
+	padding-top: 45vh;
+}
+
+.title .name{
+	color: rgb(245, 245, 245);
+	letter-spacing: 1.2px;
+	font-size: 10vw;
+}
+
+#scroll_Down{
+	text-align: center;
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	margin-left:-5%;
+}
+
+#scroll_Down p{
+  font-size: 13px;
+  font-family: "OpenSans";
+  color: rgb(255, 255, 255);
+  letter-spacing: 1.692px;
+  margin-bottom: 30px;
+}
+
+#scroll_Down a{
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	padding: 20px 23px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-align: center;
+}
+
+#scroll_Down a:hover{
+	border-color: rgb(17, 116, 158);
+	color: rgb(17, 116, 158);
+}
+
+@media screen and (max-width: 500px)  {
+	.header .logo .visibleLogo{
+		left: -2vw;
+		top: -1.5vw;
+		width: 13vw;
+		height: 13vw;
+	}
+
+	.header .logo .visibleLogo p{
+		font-size: 6vw;
+	}
+
+	.header .logo .shadowLogo{
+		width: 13vw;
+		height: 13vw;
+	}
+
+	#scroll_Down {
+		left: 50%;
+		margin-left:-10%;
+	}
 }
