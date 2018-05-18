@@ -1,0 +1,108 @@
+#news{
+	margin: 0;
+	height: 100vh;
+}
+
+#news > div{
+	margin: 0;
+	padding: 0;
+	display: block;
+
+}
+
+#news div img{
+	width: 50%;
+	height: 50vh;
+	margin: 0;
+	padding: 0;
+}
+
+#news div div.description{
+	width: 45%;
+	height: 45vh;
+	margin: 0;
+	padding: 2.5vh 2.5%;
+}
+
+#news div.news1 div.description{
+	background-color: rgb(34, 34, 34);
+}
+
+#news div.news2 div.description{
+	background-color: rgb(243, 243, 243);
+}
+
+#news div div.description div.date:after{
+	content: " |";
+}
+
+#news div.news1 img, #news div.news2 div.description{
+	float: right;
+	display: inline-block;
+}
+
+#news div.news1 div.description, #news div.news2 img{
+	float: left;
+	display: inline-block;
+}
+
+#news div.news1 div.description{
+	color: rgb(255, 255, 255);
+}
+
+#news div.news2 div.description{
+	color: rgb(34, 34, 34);
+}
+
+#news div div.description div{
+	font-size: 13px;
+	font-family: "Gotham";
+	line-height: 1.846;
+	text-align: left;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+#news div div.description h2{
+	font-size: 25px;
+	font-family: "Gotham";
+	text-transform: uppercase;
+	line-height: 1.44;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+#news div div.description p{
+	font-size: 15px;
+	font-family: "Gotham";
+	line-height: 1.6;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+@media screen and (max-width: 1000px){
+	#news{
+		height: 200vh;
+	}
+
+	#news div img{
+		height: 50vh;
+		width: 100%;
+	}
+
+	#news div div.description{
+		width: 95%;
+		height: 45vh;
+		margin: 0;
+		padding: 2.5vh 2.5%;
+	}
+}
+
+@media screen and (max-height: 568px){
+	#news div div.description p{
+		font-size: 13px;
+	}
+}

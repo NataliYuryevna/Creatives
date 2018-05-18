@@ -1,7 +1,6 @@
 #about{
 	background-color: rgb(17, 116, 158);
 	margin: 0;
-	width: 100vw;
 	height: 100vh;
 }
 
@@ -35,7 +34,7 @@
 	letter-spacing: 1.2px;
 }
 
-#about .nameAbout .logoAbout{
+#about .heading .nameAbout .logoAbout{
 	position: absolute;
 	left:50%;
     margin-left: -88px;
@@ -47,6 +46,11 @@
 	color: rgba(255, 255, 255, 0.18);
 	font-weight: bold;
 	letter-spacing: 0.852px;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #about .feature{
@@ -120,5 +124,11 @@
 		margin: 5vh 5vw;
 		height: 40vh;
 		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#about .heading .nameAbout{
+		font-size: 17px;
 	}
 }

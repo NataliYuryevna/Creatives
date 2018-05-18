@@ -26,6 +26,10 @@ a{
 	text-decoration: none;
 }
 
+a:hover span{
+	color: rgb(17, 116, 158);
+}
+
 #scroll_Down{
 	text-align: center;
 	position: fixed;
