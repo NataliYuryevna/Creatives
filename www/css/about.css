@@ -1,0 +1,124 @@
+#about{
+	background-color: rgb(17, 116, 158);
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#about .heading {
+	width: 95vw;
+	margin: 0 2.5vw;
+    height: 50vh;
+    text-align: center;
+    padding: 0;
+}
+
+#about .heading:after {
+    display: inline-block;
+    height: 100%;
+
+    vertical-align: middle;
+    content: "";
+}
+
+#about .heading .nameAbout{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	font-family: "Gotham";
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+}
+
+#about .nameAbout .logoAbout{
+	position: absolute;
+	left:50%;
+    margin-left: -88px;
+    top: 50%;
+    margin-top: -120px;
+
+	font-size: 200px;
+	font-family: "Roboto";
+	color: rgba(255, 255, 255, 0.18);
+	font-weight: bold;
+	letter-spacing: 0.852px;
+}
+
+#about .feature{
+	text-align: center;
+	height: 50vh;
+}
+
+#about .feature > div{
+	display: inline-block;
+	font-family: "Gotham";
+	color: rgb(255, 255, 255);
+	text-align: center;
+	width: 20vw;
+	margin: 0 1vw;
+
+}
+
+#about .feature > div a{
+	border: 0;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.18);
+	display: inline-block;
+	width: 99px;
+	height: 99px;
+	line-height: 99px;
+}
+
+#about .feature > div h3{
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#about .feature > div p{
+	font-size: 12px;
+	letter-spacing: 1.6px;
+	line-height: 1.6;
+	text-align: left;
+}
+
+@media screen and (max-width: 1023px), (max-height: 519px){
+	#about{
+		height: 200vh;
+	}
+
+	#about .heading{
+		height: 100vh;
+	}
+
+	#about .feature{
+		height: 100vh;
+	}
+
+	#about .feature > div{
+		height: 40vh;
+		width: 40vw;
+		margin: 5vh 4vw;
+	}
+}
+
+@media screen and (max-width: 657px), (max-height: 479px){
+	#about{
+		height: 300vh;
+	}
+
+	#about .feature{
+		height: 200vh;
+	}
+
+	#about .feature > div{
+		margin: 5vh 5vw;
+		height: 40vh;
+		width: 90vw;
+	}
+}
