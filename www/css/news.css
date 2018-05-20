@@ -10,11 +10,20 @@
 
 }
 
-#news div img{
+#news div.news1 div.img{
+	background-image: url("../images/news1.png"); 
+}
+
+#news div.news2 div.img{
+	background-image: url("../images/news2.png"); 
+}
+
+#news div div.img{
 	width: 50%;
 	height: 50vh;
-	margin: 0;
-	padding: 0;
+	background-position: center, center;
+	background-size: cover;
+
 }
 
 #news div div.description{
@@ -36,12 +45,12 @@
 	content: " |";
 }
 
-#news div.news1 img, #news div.news2 div.description{
+#news .news1 .img, #news div.news2 div.description{
 	float: right;
 	display: inline-block;
 }
 
-#news div.news1 div.description, #news div.news2 img{
+#news div.news1 div.description, #news div.news2 div.img{
 	float: left;
 	display: inline-block;
 }
@@ -55,7 +64,7 @@
 }
 
 #news div div.description div{
-	font-size: 13px;
+	font-size: 60%;
 	font-family: "Gotham";
 	line-height: 1.846;
 	text-align: left;
@@ -65,7 +74,7 @@
 }
 
 #news div div.description h2{
-	font-size: 25px;
+	font-size: 100%;
 	font-family: "Gotham";
 	text-transform: uppercase;
 	line-height: 1.44;
@@ -75,7 +84,7 @@
 }
 
 #news div div.description p{
-	font-size: 15px;
+	font-size: 80%;
 	font-family: "Gotham";
 	line-height: 1.6;
 	text-align: left;
@@ -83,26 +92,49 @@
 	margin: 0;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) and  (max-height: 499px){
 	#news{
+		margin: 0;
 		height: 200vh;
 	}
 
-	#news div img{
-		height: 50vh;
+	#news div.news1, #news div.news2{
+		height: 100vh;
+	}
+
+	#news div div.img{
+		width: 50%;
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+	}
+
+	#news div div.description{
+		width: 45%;
+		height: 95vh;
+	}
+}
+
+@media screen and (max-width: 499px) and  (max-height: 1000px){
+	#news{
+		margin: 0;
+		height: 200vh;
+	}
+
+	#news div.news1, #news div.news2{
+		height: 100vh;
+	}
+
+	#news div div.img{
 		width: 100%;
+		height: 50vh;
+		margin: 0;
+		padding: 0;
 	}
 
 	#news div div.description{
 		width: 95%;
-		height: 45vh;
-		margin: 0;
-		padding: 2.5vh 2.5%;
-	}
-}
-
-@media screen and (max-height: 568px){
-	#news div div.description p{
-		font-size: 13px;
+		height: 50vh;
+		padding: 0 2.5%;
 	}
 }

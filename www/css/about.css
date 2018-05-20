@@ -111,7 +111,7 @@
 	}
 }
 
-@media screen and (max-width: 657px), (max-height: 479px){
+@media screen and (max-width: 657px), (max-height: 480px){
 	#about{
 		height: 300vh;
 	}
@@ -124,6 +124,26 @@
 		margin: 5vh 5vw;
 		height: 40vh;
 		width: 90vw;
+	}
+}
+
+@media screen and (max-height: 500px){
+	#about{
+		height: 300vh;
+	}
+
+	#about .heading{
+		height: 100vh;
+	}
+
+	#about .feature{
+		height: 200vh;
+	}
+
+	#about .feature > div{
+		height: 90vh;
+		width: 40vw;
+		margin: 5vh 4vw;
 	}
 }
 
