@@ -24,34 +24,34 @@
 		if (!response.ok) {
 			throw new Error("HTTP error, status = " + response.status); 
 		}
-		return response.json(); 
-	})
-  	.then(function(list) {
-		var wrapper = document.getElementById('cards-grid'),
-		cards = '';
-			
-		for (var key in list) {
-			var link = 'https://a.8b.com/maker.html?topic=' + key + '&name=My+Site',
-			    imgSrc = 'https://app.8b.io/app/themes/webamp/projects/' + key + '/thumb.jpg';
-			/*cards += `	<div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3">
-							<div class="card-wrapper">
-								<div class="card-img">
-									<img class="mobirise-loader" width="3" height="4" layout="responsive" src="${imgSrc}">
-										<div placeholder class="placeholder">
-											<div class="mobirise-spinner"><em></em><em></em><em></em></div>
+		response.json().then(function(list) {
+			console.log(list);
+			var wrapper = document.getElementById('cards-grid'),
+			cards = '';
+
+			for (var key in list) {
+				var link = 'https://a.8b.com/maker.html?topic=' + key + '&name=My+Site',
+				    imgSrc = 'https://app.8b.io/app/themes/webamp/projects/' + key + '/thumb.jpg';
+				/*cards += `	<div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3">
+								<div class="card-wrapper">
+									<div class="card-img">
+										<img class="mobirise-loader" width="3" height="4" layout="responsive" src="${imgSrc}">
+											<div placeholder class="placeholder">
+												<div class="mobirise-spinner"><em></em><em></em><em></em></div>
+											</div>
+										<div class="mbr-section-btn">
+											<a class="btn btn-md btn-success display-4" href="${link}">Create Site</a>
 										</div>
-									<div class="mbr-section-btn">
-										<a class="btn btn-md btn-success display-4" href="${link}">Create Site</a>
+									</div>
+									<div class="card-box">
+										<h4 class="card-title theme-title mbr-light display-5">${list[key].title}</h4>
 									</div>
 								</div>
-								<div class="card-box">
-									<h4 class="card-title theme-title mbr-light display-5">${list[key].title}</h4>
-								</div>
-							</div>
-						</div>`;*/
-		}
-		wrapper.innerHTML = cards;
-        })
+							</div>`;*/
+			}
+			wrapper.innerHTML = cards;
+		})
+	})
 	.catch(function(error) {
 		console.log(error);
 	});
