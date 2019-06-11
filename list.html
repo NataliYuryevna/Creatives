@@ -25,7 +25,9 @@
 
 	<script>
 	    fetch('https://app.8b.io/app/themes/webamp/projects/list.json', {mode: 'no-cors'})
-        .then(res => res.json())
+        .then(res => {
+        	return res.json();
+        })
         .then(list => {
             var wrapper = document.getElementById('cards-grid'),
 				cards = '';
