@@ -3,29 +3,23 @@
 	<head>
 
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    		<meta name="viewport" content="width=device-width">
 		<title>Desktop [2019]</title>
 
 	</head>
 	<body>
-	<section class="features6 mbr-section cid-ra1NxOcIYY" id="features6-w">
+		<div class="container">
+			<div class="mbr-row mbr-justify-content-center" id="cards-grid">
 
-	    
-
-	    
-	    <div class="container">
-	        <div class="mbr-row mbr-justify-content-center" id="cards-grid">
-	        	
-	        </div>
-	    </div>
-	</section>
+			</div>
+		</div>
+	</body>
 
 	<script>
 	var myRequest = new Request('products.json');
 	fetch(myRequest)
-        .then(function(response) { return response.json(); })
+        .then(function(response) { if (response.ok) return response.json(); })
   	.then(function(list) {
 		var wrapper = document.getElementById('cards-grid'),
 		cards = '';
@@ -54,5 +48,4 @@
         });
 
 	</script>
-</body>
 </html>
