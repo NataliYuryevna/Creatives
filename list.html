@@ -19,7 +19,12 @@
 	<script>
 	var myRequest = new Request('products.json');
 	fetch(myRequest)
-        .then(function(response) { if (response.ok) return response.json(); })
+        .then(function(response) {
+		if (!response.ok) {
+			throw new Error("HTTP error, status = " + response.status); 
+		}
+		return response.json(); 
+	})
   	.then(function(list) {
 		var wrapper = document.getElementById('cards-grid'),
 		cards = '';
@@ -45,7 +50,10 @@
 						</div>`;
 		}
 		wrapper.innerHTML = cards;
-        });
+        })
+	.catch(function(error) {
+		console.log(error);
+	});
 
 	</script>
 </html>
