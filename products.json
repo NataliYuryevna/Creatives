@@ -1,0 +1,14 @@
+{	
+	"company": {
+		"title": "Company"
+		"screenshot": "projects/company/screenshot.png"
+	},
+	"agency": {
+		"title": "Agency",
+		"screenshot": "projects/agency/screenshot.png"
+	},
+	"event": {
+		"title": "Event",
+		"screenshot": "projects/event/screenshot.png"
+	}
+}
