@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<title>Desktop [2019]</title>
+
+	</head>
+	<body>
+	<section class="features6 mbr-section cid-ra1NxOcIYY" id="features6-w">
+
+	    
+
+	    
+	    <div class="container">
+	        <div class="mbr-row mbr-justify-content-center" id="cards-grid">
+	        	
+	        </div>
+	    </div>
+	</section>
+
+	<script>
+	    fetch('https://app.8b.io/app/themes/webamp/projects/list.json')
+        .then(res => res.json())
+        .then(list => {
+            var wrapper = document.getElementById('cards-grid'),
+				cards = '';
+			
+			for (var key in list) {
+				var link = 'https://a.8b.com/maker.html?topic=' + key + '&name=My+Site',
+					imgSrc = 'https://app.8b.io/app/themes/webamp/projects/' + key + '/thumb.jpg';
+				cards += `	<div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3">
+								<div class="card-wrapper">
+									<div class="card-img">
+										<img class="mobirise-loader" width="3" height="4" layout="responsive" src="${imgSrc}">
+											<div placeholder class="placeholder">
+												<div class="mobirise-spinner"><em></em><em></em><em></em></div>
+											</div>
+										<div class="mbr-section-btn">
+											<a class="btn btn-md btn-success display-4" href="${link}">Create Site</a>
+										</div>
+									</div>
+									<div class="card-box">
+										<h4 class="card-title theme-title mbr-light display-5">${list[key].title}</h4>
+									</div>
+								</div>
+							</div>`;
+			}
+			wrapper.innerHTML = cards;
+        });
+
+	</script>
+</body>
+</html>
