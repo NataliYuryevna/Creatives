@@ -65,7 +65,7 @@
 	text-align: center;
 	width: 20vw;
 	margin: 0 1vw;
-
+	vertical-align: top;
 }
 
 #about .feature > div a{
